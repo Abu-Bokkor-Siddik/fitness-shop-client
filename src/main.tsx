@@ -14,6 +14,8 @@ import About from './page/About.tsx'
 import Management from './page/Management.tsx'
 import Root from './components/features/Root.tsx'
 import Checkout from './page/Checkout.tsx'
+import Dynamic from './page/Dynamic.tsx'
+
 
 const router = createBrowserRouter([
   {
@@ -43,6 +45,11 @@ const router = createBrowserRouter([
     {
       path:'management',
       element:<Management></Management>
+    },
+    {
+      path:'/details/:id',
+      element:<Dynamic></Dynamic>,
+      // loader:({params})=> fetch(`http//localhost${params.id}`)
     },
   
   
