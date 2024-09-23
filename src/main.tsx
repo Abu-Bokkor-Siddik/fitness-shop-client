@@ -15,13 +15,15 @@ import Management from './page/Management.tsx'
 import Root from './components/features/Root.tsx'
 import Checkout from './page/Checkout.tsx'
 import Dynamic from './page/Dynamic.tsx'
+import Success from './page/Success.tsx'
+import Error from './page/Error.tsx'
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
-    errorElement:<><h1>Error page</h1></>,
+    errorElement:<Error></Error>,
     children:[{
       path:'/',
       element:<Home></Home>
@@ -43,13 +45,17 @@ const router = createBrowserRouter([
       element:<About></About>
     },
     {
+      path:'/success',
+      element:<Success></Success>
+    },
+    {
       path:'management',
       element:<Management></Management>
     },
     {
-      path:'/details/:id',
+      path:'/cart/:id',
       element:<Dynamic></Dynamic>,
-      // loader:({params})=> fetch(`http//localhost${params.id}`)
+      loader:({params})=> fetch(`https://assignment-server-zeta-ruddy.vercel.app/api/cart/${params.id}`)
     },
   
   

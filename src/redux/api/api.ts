@@ -2,8 +2,8 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 export const baseApi = createApi({
   reducerPath: "baseApi",
-  baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:3000/api" }),
-  tagTypes: ["carts"],
+  baseQuery: fetchBaseQuery({ baseUrl: "https://assignment-server-zeta-ruddy.vercel.app/api" }),
+  tagTypes: ["carts","cart"],
   endpoints: (builder) => ({
     // get all data
     getAllCarts: builder.query({
@@ -30,7 +30,8 @@ export const baseApi = createApi({
           params:params,
         };
       },
-      providesTags:["carts"]
+      providesTags:["carts"],
+      
     }),
     // post 
     addCarts: builder.mutation({
@@ -43,34 +44,51 @@ export const baseApi = createApi({
           body:data,
         };
       },
-      invalidatesTags:["carts"]
+      invalidatesTags:["carts","cart"]
     }),
     updateCarts: builder.mutation({
-      query: ({_id,payload}) => {
+      query: ({id,payload}) => {
         // data should be object ...
-        console.log(payload)
+        // console.log(payload,id)
         return {
-          url: `/cart/${_id}`,
+          url: `/cart/${id}`,
           method: "PUT",
           body:payload,
         };
       },
-      invalidatesTags:["carts"]
+      invalidatesTags:["carts","cart"]
     }),
     
     deleteCarts: builder.mutation({
-      query: (_id) => {
+      query: (id) => {
+        // console.log(id)
         // data should be object ...
         return {
-          url: `/cart/${_id}`,
+          url: `/cart/${id}`,
           method: "DELETE",
           
         };
       },
       invalidatesTags:["carts"]
     }),
+    // end
+
+   Carts: builder.query({
+      query: (cart) => {
+        // data should be object ...
+        console.log(cart,'get c')
+        return {
+          url: `/payCart?cart=${cart}`,
+          method: "GET",
+          
+        };
+        
+      },
+      providesTags:["cart"]
+    }),
+    // end
     
   }),
 });
 
-export const{useGetAllCartsQuery,useAddCartsMutation,useUpdateCartsMutation,useDeleteCartsMutation}=baseApi
+export const{useGetAllCartsQuery,useAddCartsMutation,useUpdateCartsMutation,useDeleteCartsMutation,useCartsQuery}=baseApi

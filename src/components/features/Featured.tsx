@@ -1,11 +1,11 @@
-import TextLength from "../share/TextLength";
+
 import { CiLight } from "react-icons/ci";
 const Featured = () => {
   const images =
     "https://i.ibb.co/1TnFJ5V/360-F-214746128-31-Jkea-P6r-U0-Nzzzd-FC4kh-Gkmqc8noe6h.jpg";
   return (
     <div
-      className="card bg-url  w-60 h-48 my-20 shadow-xl"
+      className="card bg-url  w-60 h-48 my-5 lg:my-20 shadow-xl"
       style={{
         backgroundImage: `url(${images})`,
         backgroundSize: "cover",

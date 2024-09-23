@@ -1,29 +1,25 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import React, { useState } from "react";
+import { useState } from "react";
 
 const AboutAccordition = () => {
   const [isOpen, setIsOpen] = useState(null);
   const dataArr = [
     {
-      title: "How do I create an account?",
+      title: " Company History",
       description:
-        'To create an account, click on the "Sign Up" button and fill out the required information. Once done, you can enjoy the benefits of being a registered member.',
+        'Founded in 2020, Fitness Equipment and Accessories began with a passion for promoting health and wellness by providing high-quality fitness products to individuals and gyms. Starting as a small venture with a limited range of products, the company has grown to become a trusted supplier of cutting-edge equipment, catering to fitness enthusiasts, athletes, and health clubs alike. Over the years, we have continuously expanded our offerings to include innovative solutions for strength training, cardio, recovery, and wellness.',
     },
     {
-      title: "What is your return policy?",
+      title: "Company Mission",
       description:
-        "Our return policy allows you to return items within 30 days of purchase. Please visit our returns page for detailed instructions and to initiate a return.",
+        "Our mission is to empower people to lead healthier, more active lives by providing them with the best fitness equipment and accessories. We are committed to offering products that combine quality, functionality, and affordability, ensuring everyone can access tools to achieve their fitness goals, whether at home, in the gym, or outdoors.",
     },
     {
-      title: "Can I change my shipping address?",
+      title: "Company Vision",
       description:
-        "Yes, you can change your shipping address before your order is shipped. Go to your account settings and update the shipping information accordingly.",
+        "We envision a world where fitness is accessible to everyone, regardless of location or experience level. Our goal is to be the leading global provider of fitness equipment and accessories, known for our dedication to innovation, customer satisfaction, and promoting a healthy lifestyle. We aim to inspire people to move, improve their well-being, and reach their full potential.",
     },
-    {
-      title: "Are there any discounts for loyal customers?",
-      description:
-        "We appreciate our loyal customers! Stay tuned for exclusive discounts, promotions, and special offers available to members of our loyalty program.",
-    },
+    
   ];
   const toggle = (idx: any) => {
     setIsOpen((prevIdx) => (prevIdx === idx ? null : idx));
