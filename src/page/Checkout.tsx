@@ -90,7 +90,6 @@ const Checkout = () => {
                     <input
                       name="email"
                       type="email"
-                      // onChange={(e)=>dispatch(setEmail(e.target.value))}
                       placeholder="email"
                       className="input input-bordered"
                       required
@@ -106,7 +105,6 @@ const Checkout = () => {
                     <input
                       name="phoneNumber"
                       type="text"
-                      // onChange={(e)=>dispatch(setPassword(e.target.value))}
                       placeholder="phone number"
                       className="input input-bordered"
                       required
@@ -120,7 +118,6 @@ const Checkout = () => {
                     <input
                       name="address"
                       type="text"
-                      // onChange={(e)=>dispatch(setPassword(e.target.value))}
                       placeholder="address"
                       className="input input-bordered"
                       required
@@ -129,7 +126,10 @@ const Checkout = () => {
                 </div>
 
                 <div className="form-control mt-6">
-                  <button type="submit" className="btn btn-active">
+                  <button
+                    type="submit"
+                    className="btn bg-[#b66a51] text-white btn-active"
+                  >
                     Payment
                   </button>
                 </div>

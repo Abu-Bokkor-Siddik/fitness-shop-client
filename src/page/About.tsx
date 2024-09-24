@@ -1,9 +1,12 @@
 import AboutAccordition from "@/components/share/Abouts/AboutAccordition";
 import AboutCarousel from "@/components/share/Abouts/AboutCarousel";
 import AboutCart from "@/components/share/Abouts/AboutCart";
+import { UseReloadWarnning } from "@/components/share/ReloadWarnning";
 import Testimonial from "@/components/share/Testimonial";
 
 const About = () => {
+   // Reload
+   UseReloadWarnning();
   return (
     <div>
       <AboutCart></AboutCart>

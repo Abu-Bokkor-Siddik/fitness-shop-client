@@ -6,13 +6,15 @@ import { MdOutlineDelete } from "react-icons/md";
 import FormModal from "@/components/share/FormModal";
 import FormModalUp from "@/components/share/FormModalUp";
 import { useDeleteCartsMutation, useGetAllCartsQuery } from "@/redux/api/api";
+import { UseReloadWarnning } from "@/components/share/ReloadWarnning";
 
 const Management = () => {
+   // Reload
+   UseReloadWarnning();
   const searchTerm = "";
   const categorys = "";
   const sort = "";
   const _id = "";
-
   const { data } = useGetAllCartsQuery({
     searchTerm,
     categorys,
@@ -21,23 +23,7 @@ const Management = () => {
   });
   const [DeleteCart] = useDeleteCartsMutation();
   // console.log(data);
-  // const hello = [
-  //   {
-  //     image: "https://i.ibb.co/rkx3Dv4/Basis-Peak.webp",
-  //     product: "Item 1",
-  //     price: "10",
-  //   },
-  //   {
-  //     image: "https://i.ibb.co/rkx3Dv4/Basis-Peak.webp",
-  //     product: "Item 2",
-  //     price: "20",
-  //   },
-  //   {
-  //     image: "https://i.ibb.co/rkx3Dv4/Basis-Peak.webp",
-  //     product: "Item 3",
-  //     price: "30",
-  //   },
-  // ];
+  
   const handleDelete = async (id: string) => {
     // console.log(id,"delete id")
     const deleteRes = await DeleteCart(id);
@@ -66,8 +52,8 @@ const Management = () => {
             <tr key={i}>
               <td className=" border flex justify-center">{i + 1}</td>
               <td className="border py-2 mx-auto text-center">{item?.name}</td>
-              <td className="border text-center">100</td>
-              <td className="border text-center">hello</td>
+              <td className="border text-center">{item?.price}</td>
+              <td className="border text-center">{item?.category}</td>
               <td className="  border flex justify-evenly items-center  mx-auto ">
                 <div className=" ">
                   <FormModalUp id={item?._id}></FormModalUp>

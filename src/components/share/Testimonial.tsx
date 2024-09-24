@@ -10,17 +10,17 @@ import {
 const Testimonial = () => {
   const content = [
     {
-      Ima: "https://i.ibb.co/TB4Tzn4/Colorful-Brush-Fitness-Facebook-Cover-1.png",
+      Ima: "https://i.ibb.co.com/1TnFJ5V/360-F-214746128-31-Jkea-P6r-U0-Nzzzd-FC4kh-Gkmqc8noe6h.jpg",
       feedback:"I’ve been using the strength training equipment from Fitness Equipment and Accessories for over a year, and I couldn’t be happier! The quality is exceptional, and I’ve seen significant improvements in my workouts. The customer service team was also incredibly helpful in guiding me toward the best products for my home gym!",
       name:'John D'
     },
     {
-      Ima: "https://i.ibb.co/TB4Tzn4/Colorful-Brush-Fitness-Facebook-Cover-1.png",
+      Ima: "https://i.ibb.co.com/hLyThwc/download-9.jpg",
       feedback:"We recently upgraded our cardio and strength sections with products from Fitness Equipment and Accessories, and it has been a game-changer! The equipment is sturdy, reliable, and user-friendly. Our members have noticed the difference, and we’ve seen a boost in overall satisfaction with the new gear.",
       name:'Michael K.'
     },
     {
-      Ima: "https://i.ibb.co/TB4Tzn4/Colorful-Brush-Fitness-Facebook-Cover-1.png",
+      Ima: "https://i.ibb.co.com/fdVFVY8/istockphoto-611778400-170667a.jpg",
       feedback:"As a personal trainer, I rely on top-quality equipment for my clients. Fitness Equipment and Accessories has become my go-to source for everything from kettlebells to resistance bands. Their products are durable, affordable, and perform excellently under heavy use. My clients love them, and so do I!",
       name:'Sarah M.'
     },
@@ -39,7 +39,7 @@ const Testimonial = () => {
                   <div className="card h-[450px] bg-base-100 w-96 shadow-xl mx-auto">
                     <div className="avatar mx-auto ">
                       <div className="ring-primary ring-offset-base-100 w-24 rounded-full ring ring-offset-2">
-                        <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                        <img src={item?.Ima} />
                       </div>
                     </div>
                     <div className="card-body">

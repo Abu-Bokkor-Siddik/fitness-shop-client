@@ -5,7 +5,8 @@ import { Card, CardContent } from "@/components/ui/card"
 const Carosult = () => {
 const content =[
 {Ima:'https://i.ibb.co/TB4Tzn4/Colorful-Brush-Fitness-Facebook-Cover-1.png'},
-{Ima:'https://i.ibb.co/HYTjzqN/Bodybuilder-Fitness-Club-Black-Logo.png'},
+{Ima:'https://i.ibb.co.com/pytrnd9/Blue-Professional-Fitness-Tutorial-You-Tube-Thumbnail.png'},
+{Ima:'https://i.ibb.co.com/vqf9Kr9/Green-Fitness-You-Tube-Thumbnail.png'},
 ]
 
   return (

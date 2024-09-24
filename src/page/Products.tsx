@@ -1,6 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import FewCart from "@/components/features/FewCart";
+import { UseReloadWarnning } from "@/components/share/ReloadWarnning";
 import { useGetAllCartsQuery } from "@/redux/api/api";
 import { useEffect, useState } from "react";
 const Products = () => {
@@ -62,7 +63,8 @@ const Products = () => {
     // console.log(index)
     options.push(index);
   }
-
+ // Reload
+ UseReloadWarnning();
   // end get
   return (
     <div className="mx-auto min-h-[800px]  max-w-[1400px] h-auto ">
@@ -110,7 +112,7 @@ const Products = () => {
             id="cars"
           >
             <option value="">Filters</option>
-            <option value="hello">Cardio</option>
+            <option value="cardio">Cardio</option>
             <option value="strength">Strength</option>
             <option value="cardio and strength">Cardio and Strength</option>
           </select>

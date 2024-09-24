@@ -1,12 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import Carosult from "../components/features/Carosult";
 import Cards from "../components/features/Cards";
-// import {
-//   useAddCartsMutation,
-//   useDeleteCartsMutation,
-//   useGetAllCartsQuery,
-//   useUpdateCartsMutation,
-// } from "@/redux/api/api";
+
 import FewCart from "@/components/features/FewCart";
 import Feature from "@/components/features/Featured";
 import Gallery from "@/components/features/Gallery";
@@ -21,38 +16,38 @@ const Home = () => {
   const benefits = [
     {
       _id: 1,
-      title: "hello",
-      describe: "",
+      title: "Built to Last",
+      describe: "Durable, high-quality materials designed for long-term use.",
       images: "",
     },
     {
       _id: 2,
-      title: "hello",
-      describe: "",
+      title: "Comfort Grip",
+      describe: "Ergonomic designs for a comfortable workout experience.",
       images: "",
     },
     {
       _id: 3,
-      title: "hello",
-      describe: "",
+      title: "Eco-Friendly ",
+      describe: "Sustainable materials for a greener workout. ensuring a sustainable workout experience.",
       images: "",
     },
     {
       _id: 4,
-      title: "hello",
-      describe: "",
+      title: "Affordable",
+      describe: " High-quality products at prices that fit your budget and safe money",
       images: "",
     },
     {
       _id: 5,
-      title: "hello",
-      describe: "",
+      title: "Ergonomic",
+      describe: "Crafted with user comfort in mind, featuring soft grips and adjustable components for a smooth workout.",
       images: "",
     },
     {
       _id: 6,
-      title: "hello",
-      describe: "",
+      title: "Versatile",
+      describe: "Suitable for a variety of fitness routines, from strength training to cardio and flexibility exercises.",
       images: "",
     },
   ];
@@ -93,63 +88,7 @@ const Home = () => {
     _id,
   });
   // console.log(data);
-  // test post
-  // const [addCart] = useAddCartsMutation();
-  // const handleButton = () => {
-  //   // console.log("hello");
-  //   const datas = {
-  //     name: "bike",
-  //     description: "A digital bike is here.",
-  //     price: 10000,
-  //     category: "caycale",
-  //     images: "https://i.ibb.co/rkx3Dv4/Basis-Peak.webp",
-  //     stock: {
-  //       quantity: 10,
-  //       isStock: true,
-  //     },
-  //   };
-
-  //   // call
-  //   addCart(datas);
-  // };
-  // const [update] = useUpdateCartsMutation();
-  // // test update
-  // const handleUpdateButton = () => {
-  //   const _id = "66914426864a0845ac57d6af";
-  //   // const dataes = {
-  //   //   name: "car",
-  //   //   description: "A digital bike is here.",
-  //   //   price: 30000,
-  //   //   category: "caycale",
-  //   //   images: "https://i.ibb.co/rkx3Dv4/Basis-Peak.webp",
-  //   //   stock: {
-  //   //     quantity: 10,
-  //   //     isStock: true,
-  //   //   },
-  //   // };
-  //   const final = {
-  //     _id,
-  //     payload: {
-  //       name: "car",
-  //       description: "A digital bike is here.",
-  //       price: 30000,
-  //       category: "caycale",
-  //       images: "https://i.ibb.co/rkx3Dv4/Basis-Peak.webp",
-  //       stock: {
-  //         quantity: 10,
-  //         isStock: true,
-  //       },
-  //     },
-  //   };
-  //   update(final);
-  // };
-  // // end
-  // // delete
-  // const [Carddelete] = useDeleteCartsMutation();
-  // const handleDeleteButton = () => {
-  //   const _ids = "66901bbff551c8bae15a1cc6";
-  //   Carddelete(_ids);
-  // };
+  
   // category
   const handleCategory = () => {
     // console.log('hello category')
@@ -171,14 +110,17 @@ const Home = () => {
       {/* <button onClick={() => handleButton()}>click to post </button>
       <button onClick={() => handleUpdateButton()}>click to update </button>
       <button onClick={() => handleDeleteButton()}>click to delete </button> */}
+      <p className="text-center text-4xl mt-16 font-mono">Some Features</p>
       <div className=" lg:max-w-[900px] grid grid-cols-1 lg:grid-cols-3 grid-rows-2 justify-evenly items-center mx-auto   ">
+
         {benefits?.map((item) => (
           <div key={item._id} className="mx-auto">
-            <Feature></Feature>
+            <Feature item={item}></Feature>
           </div>
         ))}
       </div>
       {/* it will be change soon */}
+      <p className="text-center text-4xl mb-10 font-mono"> Some Products </p>
       <div className="mx-auto max-w-[1200px] grid  grid-cols-1 lg:grid-cols-3 grid-rows-2 justify-evenly items-center my-5 ">
         {data?.data?.slice(1, 7).map((item: any) => (
           <div key={item._id} className="mx-auto  my-3">
@@ -186,7 +128,7 @@ const Home = () => {
           </div>
         ))}
       </div>
-
+      <p className="text-center text-4xl mb-10 font-mono">Gallery Show Products </p>
       <div className="  max-w-[1200px]   mx-auto max-h-[800px] ">
         <Gallery></Gallery>
       </div>
