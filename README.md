@@ -10,6 +10,7 @@ This project focuses on creating an online platform dedicated to selling high-qu
 2. user can update,delete products easily.
 3. Good looking user interface .
 4. User can buy products .
+5. Debounce api and reload warning  feature 
 ## Technology Stack
  Frontend --> React.js,Redux,tailwind.css,shadCn ui
  BackEnd  --> Node.js,mongoose,mongodb.
